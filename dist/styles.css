@@ -1,0 +1,47 @@
+.button {
+  font-family: inherit;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  outline: 0;
+  background: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  margin: 0rem 0.5rem;
+}
+
+.message {
+  color: #fff;
+  margin: 0 0.25rem;
+  font-family: inherit;
+}
+.buttonsDiv {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.barStyles {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0 !important;
+  left: 0 !important;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+  width: 100%;
+  background-color: #000;
+  transition: opacity 0.5s;
+}
+
+@media (max-width: 500px) {
+  .button {
+    padding: 0.65rem 1.15rem;
+    font-size: 0.8rem;
+  }
+  .message {
+    font-size: 0.9rem;
+  }
+}

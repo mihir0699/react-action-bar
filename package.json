@@ -1,21 +1,36 @@
 {
-  "name": "action-bar",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-action-bar",
+  "version": "1.0.2",
+  "keywords": [
+    "react",
+    "components",
+    "action-bar",
+    "form",
+    "save",
+    "light-weight"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "description": "Action bar for react to simplify form/data submission and updation.",
+  "author": "Mihir Gupta",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "set PORT=3006 && react-scripts start",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build": "rm -rf dist && babel src/lib --out-dir dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +49,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0"
   }
 }

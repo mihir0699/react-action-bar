@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# react-action-bar (npm package) ✨
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://video-chat-mihir.vercel.app/)&nbsp;[![Build passing](https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=flat-square)](https://video-chat-mihir.vercel.app/)&nbsp;[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://video-chat-mihir.vercel.app/)&nbsp;[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://video-chat-mihir.vercel.app/)&nbsp;![Made with Love in India](https://madewithlove.org.in/badge.svg)
 
-## Available Scripts
+# Demo
 
-In the project directory, you can run:
+![enter image description here](https://fruit-slice.s3.ap-south-1.amazonaws.com/Fruit-Slice-Game-master/React%20App%20%283%29.gif?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPf//////////wEaCmFwLXNvdXRoLTEiRjBEAiAAoR8uMoHHpkU0iUzpjnenfkSt41pESNf7qwt4NEER1QIgO3d3NpaUii%2bSS2Y6z5FG8o7R/wRZLcnlK0XPtys/cBgqmgMIof//////////ARACGgw2NzY1MTA0Mjg1MTciDFI2mV3TtOOF%2bQ1IoiruAvXRVqcdIsTm/La7x1jB4bkqTFFAX6sSlIPqGW4r6ywn26KoCYfIkq3oRKaQWpJcYi5UbIhVIpRyoqdhZ2So7pHAthCZegO0XA4byBuZK64tGZuPH5pkcyI5bDshmZlromRPpN7OqOaVHqbRnoqhdudGldRWz0skpr4CfOS2QSSj11dngYkf7IlAD0a4XYyST8igElu1JUh2ZIIFX7hjwOuVQ%2bMRtdis2oM0fDxZSuOIOXjtN7uSbaTA1ygz6sWcmJvDY0iIeguS7KQYuKcTKWfFDEQUQcVPlJygQrUYUfc3UR8H3RhJwjiBW61s4d5d8m7dNvpc3KRJHZOQTU1VXZ1P5p/DFdPF6Ijk9V9Eqj6ZayLn4f218BkFfSDpQjxGQxkhFm2XyjOzMp/dP60%2bhw094jasAzayMfe1aS/gO0/L1ZgHPU7gT1i5BQDouut5RpjApyquhyK1fBpa/5dyws5wsBDoB6ZWVkje4cQDgDCN/Z2MBjq0An%2bYmwoB2lawvXgRXX2IKlD%2bmUgOWAQuVPVHgYRaVqNJTB16UJ9rC/7HpiBUNo583VvphO8ZRyhFB5KS03oMF7flz2oBuoiNI0WculcCBIdlY84dD4hdvBn/z02eyZu4bgAcNBOUGVoMWsiIOEpEDP3mpdWqxv0nIyr48jdQrngFrjlhbGB6tD0t1Jm8aCrTu9Loa%2buzXBgSE5Gx4u5HzbBBgQJfyMJBlS3o/vGWJaUEiR%2bY3L0snpKU30N4Lh2UZBxOF1z49tkX47ltWUaGnIsBKWciRMj30GbMWKUsMzIIDsUQiE1uKvg90WKkVowV4VEPmbRgrhMLy23/dgfTB4/jmcguwS9j6Bn2RMxXHEhO%2bydQDfwsxk3r/XiAq4sEHth8lVBFvketnwcCFOA6oYGAupvP&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20211107T072247Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAZ3AZJ5VSZLIK3WVX/20211107/ap-south-1/s3/aws4_request&X-Amz-Signature=4f841812976de50a7529b62208e3223a8d542269abe74f14132801b8ffe79366)
 
-### `npm start`
+🎉 react-action-bar allows you to simplify form submission and data updation with just a few lines of code.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation :
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+$ npm install react-action-bar
+$ yarn add react-action-bar
+```
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- No need to scroll up or down to save the form or update data.
+- Fully customisable.
+- Very light weight (~30kb)
+- Discard action button.
 
-### `npm run build`
+## Code example:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+      import React from 'react';
+      import ActionBar from 'react-action-bar';
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+      function App(){
+        return (
+          <div>
+           <ActionBar
+    		isVisible={visible}
+    		primaryAction={handleSave}
+    		discardAction={handleDiscard}
+    		/>
+          </div>
+    );
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+}
 
-### `npm run eject`
+## Props
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| Prop            | Description                                                         | Type     | Required | Default         |
+| :-------------- | ------------------------------------------------------------------- | -------- | -------- | --------------- |
+| isVisible       | accepts a boolean to evaluate whether to show action bar            | Boolean  | true     | -               |
+| primaryAction   | accepts a function to execute when primary action button is clicked | function | true     | -               |
+| discardAction   | accepts a function to execute when discard action button is clicked | function | true     | -               |
+| message         | message to display on the action bar                                | function | true     | Unsaved changes |
+| backgroundColor | background color of the action bar                                  | string   | false    | #000            |
+| primaryColor    | primary color of the action bar                                     | string   | false    | #008060         |
+| primaryTitle    | title of the primary action button                                  | string   | false    | Save            |
+| discardTitle    | title of the discard action button                                  | string   | false    | Discard         |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contribute
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Show your ❤️ and support by giving a ⭐. Any suggestions are welcome!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
+<a href="https://www.buymeacoffee.com/mihir0699" target="_blank">
+<img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
